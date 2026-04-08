@@ -1,14 +1,11 @@
 var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   mousewheel: true,
-  keyboard: true,
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
   },
 });
 
-// PETIR
 const canvas = document.getElementById("lightning");
 const ctx = canvas.getContext("2d");
 
@@ -38,7 +35,6 @@ setInterval(() => {
   if (Math.random() > 0.7) lightning();
 }, 300);
 
-// MODAL + DOWNLOAD
 function openModal(img) {
   document.getElementById("modal").style.display = "flex";
   document.getElementById("modalImg").src = img.src;
