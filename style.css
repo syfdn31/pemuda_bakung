@@ -6,7 +6,6 @@ body {
   color: white;
 }
 
-/* ⚡ PETIR */
 #lightning {
   position: fixed;
   top: 0;
@@ -16,7 +15,6 @@ body {
   z-index: -1;
 }
 
-/* SWIPER */
 .swiper {
   height: 100vh;
 }
@@ -26,10 +24,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
 }
 
-/* 🖼️ LOGO BESAR BACKGROUND */
 .bg-slide-logo {
   position: absolute;
   top: 50%;
@@ -38,14 +34,8 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0.1;
   z-index: 0;
-
-  filter: drop-shadow(0 0 30px rgba(255,140,0,0.4))
-          drop-shadow(0 0 80px rgba(255,140,0,0.3));
-
-  animation: floatLogo 6s ease-in-out infinite;
 }
 
-/* GLASS */
 .glass {
   position: relative;
   z-index: 1;
@@ -54,144 +44,63 @@ body {
   border-radius: 20px;
   backdrop-filter: blur(20px);
   text-align: center;
-  max-width: 320px;
-
-  box-shadow: 0 0 20px rgba(255,140,0,0.2),
-              0 0 40px rgba(255,140,0,0.1);
-
-  animation: fadeUp 1s ease;
 }
 
-/* 🔥 LOGO UTAMA */
 .logo {
   width: 120px;
   margin-bottom: 15px;
-
-  filter: drop-shadow(0 0 15px orange)
-          drop-shadow(0 0 30px orange)
-          drop-shadow(0 0 60px orange);
-
-  animation: glowPulse 2s infinite alternate;
 }
 
-/* GALLERY */
 .gallery {
   display: flex;
   gap: 10px;
-  justify-content: center;
 }
 
 .gallery img {
   width: 90px;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.gallery img:hover {
-  transform: scale(1.1);
-}
-
-/* MODAL */
 .modal {
   display: none;
   position: fixed;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.9);
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+}
+
+.modal-content {
+  text-align: center;
 }
 
 .modal img {
   max-width: 90%;
-  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-/* POPUP */
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
+.modal-btn a,
+.modal-btn button {
+  padding: 10px;
+  margin: 5px;
+  background: orange;
+  border: none;
+  border-radius: 8px;
 }
 
-.popup-content {
-  background: #111;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-/* SOSMED */
 .sosmed {
-  margin-top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .sosmed-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  text-decoration: none;
   color: white;
-  font-size: 14px;
-
-  padding: 12px;
-  border-radius: 12px;
-
-  background: rgba(255,255,255,0.05);
-
-  transition: 0.3s;
-}
-
-.sosmed-item img {
-  width: 25px;
-}
-
-.sosmed-item:hover {
-  transform: scale(1.05);
-  background: rgba(255,140,0,0.2);
-
-  box-shadow: 0 0 10px orange,
-              0 0 20px orange,
-              0 0 40px orange;
-}
-
-/* ANIMASI */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes glowPulse {
-  from {
-    filter: drop-shadow(0 0 15px orange);
-  }
-  to {
-    filter: drop-shadow(0 0 40px orange);
-  }
-}
-
-@keyframes floatLogo {
-  0% { transform: translate(-50%, -50%) scale(1); }
-  50% { transform: translate(-50%, -55%) scale(1.05); }
-  100% { transform: translate(-50%, -50%) scale(1); }
+  text-decoration: none;
 }
