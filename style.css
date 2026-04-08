@@ -1,15 +1,12 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
   background: black;
   color: white;
 }
 
 #lightning {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -28,27 +25,19 @@ body {
 
 .bg-slide-logo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  transform: translate(-50%, -50%);
+  width: 400px;
   opacity: 0.1;
-  z-index: 0;
 }
 
 .glass {
-  position: relative;
-  z-index: 1;
   background: rgba(255,255,255,0.08);
   padding: 30px;
   border-radius: 20px;
-  backdrop-filter: blur(20px);
   text-align: center;
 }
 
 .logo {
   width: 120px;
-  margin-bottom: 15px;
 }
 
 .gallery {
@@ -58,7 +47,6 @@ body {
 
 .gallery img {
   width: 90px;
-  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -66,20 +54,14 @@ body {
   display: none;
   position: fixed;
   background: rgba(0,0,0,0.9);
-  top: 0;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
 }
 
-.modal-content {
-  text-align: center;
-}
-
 .modal img {
   max-width: 90%;
-  margin-bottom: 10px;
 }
 
 .modal-btn a,
@@ -88,19 +70,10 @@ body {
   margin: 5px;
   background: orange;
   border: none;
-  border-radius: 8px;
 }
 
 .sosmed {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.sosmed-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  text-decoration: none;
 }
