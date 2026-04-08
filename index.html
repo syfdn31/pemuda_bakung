@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<!-- ⚡ PETIR -->
 <canvas id="lightning"></canvas>
 
 <div class="swiper mySwiper">
@@ -37,62 +36,61 @@
       </div>
     </div>
 
-    <!-- SLIDE 3 -->
+    <!-- SLIDE 3 KEGIATAN -->
     <div class="swiper-slide">
       <img src="logo/bakung.png" class="bg-slide-logo">
       <div class="glass">
         <img src="logo/bakung.png" class="logo">
         <h2>Kegiatan</h2>
+
         <div class="gallery">
-          <img src="img1.jpg" onclick="openModal(this)">
-          <img src="img2.jpg" onclick="openModal(this)">
-          <img src="img3.jpg" onclick="openModal(this)">
+          <img src="kegiatan/img1.jpg" onclick="openModal(this)">
+          <img src="kegiatan/img2.jpg" onclick="openModal(this)">
+          <img src="kegiatan/img3.jpg" onclick="openModal(this)">
         </div>
+
       </div>
     </div>
 
     <!-- SLIDE 4 -->
-<div class="swiper-slide">
-  <img src="logo/bakung.png" class="bg-slide-logo">
+    <div class="swiper-slide">
+      <img src="logo/bakung.png" class="bg-slide-logo">
+      <div class="glass">
+        <img src="logo/bakung.png" class="logo">
 
-  <div class="glass">
-    <img src="logo/bakung.png" class="logo">
+        <h2>Kontak</h2>
 
-    <h2>Kontak</h2>
+        <div class="sosmed">
 
-    <div class="sosmed">
+          <a href="https://instagram.com/pemudabakung" target="_blank" class="sosmed-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+            <span>@pemudabakung</span>
+          </a>
 
-      <!-- INSTAGRAM -->
-      <a href="https://instagram.com/pemudabakung" target="_blank" class="sosmed-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-        <span>@pemudabakung</span>
-      </a>
+          <a href="https://tiktok.com/@pemuudabahagiaa" target="_blank" class="sosmed-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+            <span>@pemuudabahagiaa</span>
+          </a>
 
-      <!-- TIKTOK -->
-      <a href="https://tiktok.com/@pemuudabahagiaa" target="_blank" class="sosmed-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
-        <span>PEMUDABAKUNG</span>
-      </a>
+        </div>
 
+      </div>
     </div>
 
   </div>
-</div>
 
   <div class="swiper-pagination"></div>
 </div>
 
 <!-- MODAL -->
-<div id="modal" class="modal" onclick="closeModal()">
-  <img id="modalImg">
-</div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <img id="modalImg">
 
-<!-- POPUP -->
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <h3>Gabung Pemuda Bakung</h3>
-    <p>Hubungi admin untuk info lebih lanjut</p>
-    <button onclick="closePopup()">Tutup</button>
+    <div class="modal-btn">
+      <a id="downloadBtn" download>Download</a>
+      <button onclick="closeModal()">Tutup</button>
+    </div>
   </div>
 </div>
 
