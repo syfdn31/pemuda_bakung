@@ -2,23 +2,18 @@ var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   mousewheel: true,
   keyboard: true,
-  grabCursor: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
 
-// ⚡ PETIR OREN
+// PETIR
 const canvas = document.getElementById("lightning");
 const ctx = canvas.getContext("2d");
 
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 function lightning() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -35,8 +30,7 @@ function lightning() {
     ctx.lineTo(x, y);
   }
 
-  ctx.strokeStyle = "rgba(255,140,0,0.9)";
-  ctx.lineWidth = 2;
+  ctx.strokeStyle = "orange";
   ctx.stroke();
 }
 
@@ -44,21 +38,13 @@ setInterval(() => {
   if (Math.random() > 0.7) lightning();
 }, 300);
 
-// MODAL
+// MODAL + DOWNLOAD
 function openModal(img) {
   document.getElementById("modal").style.display = "flex";
   document.getElementById("modalImg").src = img.src;
+  document.getElementById("downloadBtn").href = img.src;
 }
 
 function closeModal() {
   document.getElementById("modal").style.display = "none";
-}
-
-// POPUP
-function showPopup() {
-  document.getElementById("popup").style.display = "flex";
-}
-
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
 }
