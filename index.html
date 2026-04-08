@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PEMUDA BAKUNG</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ⚡ PETIR -->
+<canvas id="lightning"></canvas>
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+    <!-- SLIDE 1 -->
+    <div class="swiper-slide">
+      <img src="logo/bakung.png" class="bg-slide-logo">
+      <div class="glass">
+        <img src="logo/bakung.png" class="logo">
+        <h1>PEMUDA BAKUNG</h1>
+        <p>Bersatu • Berkarya • Membangun</p>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="swiper-slide">
+      <img src="logo/bakung.png" class="bg-slide-logo">
+      <div class="glass">
+        <img src="logo/bakung.png" class="logo">
+        <h2>Tentang Kami</h2>
+        <p>Kami adalah komunitas pemuda aktif dalam kegiatan sosial dan pembangunan desa.</p>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="swiper-slide">
+      <img src="logo/bakung.png" class="bg-slide-logo">
+      <div class="glass">
+        <img src="logo/bakung.png" class="logo">
+        <h2>Kegiatan</h2>
+        <div class="gallery">
+          <img src="img1.jpg" onclick="openModal(this)">
+          <img src="img2.jpg" onclick="openModal(this)">
+          <img src="img3.jpg" onclick="openModal(this)">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="swiper-slide">
+      <img src="logo/bakung.png" class="bg-slide-logo">
+      <div class="glass">
+        <img src="logo/bakung.png" class="logo">
+        <h2>Kontak</h2>
+        <p>Instagram: @pemudabakung</p>
+        <button onclick="showPopup()">Gabung</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h3>Gabung Pemuda Bakung</h3>
+    <p>Hubungi admin untuk info lebih lanjut</p>
+    <button onclick="closePopup()">Tutup</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

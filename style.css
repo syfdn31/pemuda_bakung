@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  background: black;
+  color: white;
+}
+
+/* ⚡ PETIR */
+#lightning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* SLIDE */
+.swiper {
+  height: 100vh;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🖼️ LOGO BESAR BACKGROUND */
+.bg-slide-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px; /* 🔥 DIPERBESAR */
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  z-index: 0;
+
+  filter: drop-shadow(0 0 30px rgba(255,140,0,0.4))
+          drop-shadow(0 0 80px rgba(255,140,0,0.3));
+
+  animation: floatLogo 6s ease-in-out infinite;
+}
+
+/* GLASS */
+.glass {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  max-width: 320px;
+
+  box-shadow: 0 0 20px rgba(255,140,0,0.2),
+              0 0 40px rgba(255,140,0,0.1);
+
+  animation: fadeUp 1s ease;
+}
+
+/* 🔥 LOGO UTAMA DIPERBESAR */
+.logo {
+  width: 120px; /* 🔥 LEBIH BESAR */
+  margin-bottom: 15px;
+
+  filter: drop-shadow(0 0 15px orange)
+          drop-shadow(0 0 30px orange)
+          drop-shadow(0 0 60px orange);
+
+  animation: glowPulse 2s infinite alternate;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 90px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* ANIMASI */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  from { filter: drop-shadow(0 0 15px orange); }
+  to { filter: drop-shadow(0 0 40px orange); }
+}
+
+@keyframes floatLogo {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -55%) scale(1.05); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
