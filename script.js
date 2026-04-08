@@ -3,9 +3,11 @@ var swiper = new Swiper(".mySwiper", {
   mousewheel: true,
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 });
 
+// PETIR
 const canvas = document.getElementById("lightning");
 const ctx = canvas.getContext("2d");
 
@@ -35,6 +37,7 @@ setInterval(() => {
   if (Math.random() > 0.7) lightning();
 }, 300);
 
+// MODAL
 function openModal(img) {
   document.getElementById("modal").style.display = "flex";
   document.getElementById("modalImg").src = img.src;
@@ -44,3 +47,8 @@ function openModal(img) {
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
+
+window.onclick = function(e) {
+  const modal = document.getElementById("modal");
+  if (e.target === modal) modal.style.display = "none";
+};
